@@ -6,7 +6,7 @@ library(ggplot2)
 library(stringr)
 
 # Load the combined dataset
-combined_data <- read_csv("combined_hover_data.csv")
+combined_data <- read_csv("data/combined_hover_data.csv")
 
 # Capitalize the first letter of each state
 combined_data$State <- str_to_title(combined_data$State)
@@ -19,7 +19,7 @@ combined_data <- combined_data %>%
 ui <- fluidPage(
   # Add a logo at the top right
   tags$div(
-    tags$img(src = "logo.png", height = "50px", align = "right"), # Path to your logo image or URL
+    tags$img(src = "www/logo.png", height = "50px", align = "right"), # Path to your logo image or URL
     titlePanel("Phone-Pay State-wise Transaction Data (2024)")
   ),
   
